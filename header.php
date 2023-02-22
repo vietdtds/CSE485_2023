@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="my-logo">
                 <a class="navbar-brand" href="#">
-                    <img src="images/logo2.png" alt="" class="img-fluid">
+                    <img src="image/logo2.png" alt="" class="img-fluid">
                 </a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,10 +12,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./">Trang chủ</a>
+                        <a class="nav-link active" aria-current="page" href="./">TRANG CHỦ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./login.php">Đăng nhập</a>
+                        <a class="nav-link" href="./login.php">ĐĂNG NHẬP</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -33,13 +33,13 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/slideshow/slide01.jpg" class="d-block w-100" alt="...">
+                <img src="image/slideshow/slide01.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="images/slideshow/slide02.jpg" class="d-block w-100" alt="...">
+                <img src="image/slideshow/slide02.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="images/slideshow/slide03.jpg" class="d-block w-100" alt="...">
+                <img src="image/slideshow/slide03.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
