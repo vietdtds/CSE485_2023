@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="my-logo">
                 <a class="navbar-brand" href="#">
-                    <img src="images/logo2.png" alt="" class="img-fluid">
+                    <img src="./image/logo2.jpg" alt="" class="img-fluid">
                 </a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,13 +33,13 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/slideshow/slide01.jpg" class="d-block w-100" alt="...">
+                <img src="./images/slideshow/slide01.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="images/slideshow/slide02.jpg" class="d-block w-100" alt="...">
+                <img src="./images/slideshow/slide02.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="images/slideshow/slide03.jpg" class="d-block w-100" alt="...">
+                <img src="./images/slideshow/slide03.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
