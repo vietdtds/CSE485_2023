@@ -26,8 +26,6 @@ $result = mysqli_query($conn, $query);
         <h3 class="text-center text-uppercase mb-3 text-primary">TOP bài hát yêu thích</h3>
         <div class="row">
             <?php
-            $query = "SELECT * FROM `baiviet`;";
-            $result = mysqli_query($conn, $query);
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) { ?>
                     <div class="col-sm-3">
