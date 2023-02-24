@@ -1,3 +1,12 @@
+<?php
+require './connectDB.php';
+$conn = connectDB();
+$query = "SELECT * FROM `baiviet`;";
+$result = mysqli_query($conn, $query);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,82 +20,33 @@
 </head>
 
 <body>
-    <?php
-    $username = "root"; // Khai báo username
-    $password = "";      // Khai báo password
-    $server   = "localhost";   // Khai báo server
-    $dbname   = "btth01_cse485";      // Khai báo database
-
-    // Kết nối database tintuc
-    $connect = mysqli_connect($server, $username, $password, $dbname);
-
-    //Nếu kết nối bị lỗi thì xuất báo lỗi và thoát.
-    if (!$connect) {
-        die("Không kết nối :" . mysqli_connect_error());
-        exit();
-    }
-
-    ?>
     <?php include 'header.php'; ?>
 
     <main class="container-fluid mt-3">
         <h3 class="text-center text-uppercase mb-3 text-primary">TOP bài hát yêu thích</h3>
         <div class="row">
-            <div class="col-sm-3">
-                <div class="card mb-2" style="width: 100%;">
-                    <img src="images/songs/cayvagio.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">
-                            <a href="./detail.php" class="text-decoration-none">Cây, lá và gió</a>
-                        </h5>
+            <?php
+            $query = "SELECT * FROM `baiviet`;";
+            $result = mysqli_query($conn, $query);
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) { ?>
+                    <div class="col-sm-3">
+                        <div class="card mb-2" style="width: 100%;">
+                            <img src="images/songs/cayvagio.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">
+                                    <a href="./detail.php?ma_bviet=<?= $row['ma_bviet'] ?>" class="text-decoration-none">
+                                        <?=  $row['tieude'] ?>
+                                    </a>
+                                </h5>
 
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card mb-2" style="width: 100%;">
-                    <img src="images/songs/csmt.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">
-                            <a href="./detail.php" class="text-decoration-none">Cuộc sống mến thương</a>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card mb-2" style="width: 100%;">
-                    <img src="images/songs//longme.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">
-                            <a href="./detail.php" class="text-decoration-none">Lòng mẹ</a>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card mb-2" style="width: 100%;">
-                    <img src="images/songs/phoipha.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">
-                            <a href="./detail.php" class="text-decoration-none">Phôi pha</a>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="card mb-2" style="width: 100%;">
-                    <img src="images/songs/noitinhyeubatdau.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center my-title">
-                            <a href="./detail.php" class="text-decoration-none">Nơi tình yêu bắt đầu</a>
-                        </h5>
-                    </div>
-                </div>
-            </div>
+            <?php
+                }
+            }
+            ?>
         </div>
     </main>
 
