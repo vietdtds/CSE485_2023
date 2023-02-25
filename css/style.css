@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 body{
@@ -29,3 +30,23 @@ body{
     overflow-y: hidden;
 }
 
+=======
+#card{
+  height: 300px !important;
+  position: relative !important;
+}
+
+#cardImg{
+  height: 250px !important;
+  object-fit: cover;
+
+}
+
+#cardTitle{
+  font-size: 15px !important;
+  position: absolute !important;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
+>>>>>>> 4826a910e8356924b48f1f5e40b49108d60e6a3e
