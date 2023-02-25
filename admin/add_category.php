@@ -1,7 +1,8 @@
 <?php
 include './header.php';
-$value =  $_POST['txtCatName'];
-echo $value;
+$value =  $_POST['valueCategory'];
+
+
 
 ?>
 <main class="container mt-5 mb-5">
@@ -11,7 +12,7 @@ echo $value;
       <form action="add_category.php" method="POST">
         <div class="input-group mt-3 mb-3">
           <span class="input-group-text" id="lblCatName">Tên thể loại</span>
-          <input type="text" class="form-control" name="txtCatName" value="abcd">
+          <input type="text" class="form-control" name="valueCategory" id="valueCategory" value="">
         </div>
 
         <div class="form-group  float-end ">
