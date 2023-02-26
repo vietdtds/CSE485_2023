@@ -1,3 +1,36 @@
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+body{
+    font-family: 'Numans', sans-serif !important;
+}
+.bg-body-tertiary{
+    background-color:#fff !important;
+}
+
+.my-logo{
+    max-width: 20%;
+}
+
+.nav-link{
+    text-transform: uppercase;
+}
+
+.active{
+    font-weight: bold;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.my-title{
+    overflow-y: hidden;
+}
+
+=======
 #card{
   height: 300px !important;
   position: relative !important;
@@ -16,3 +49,4 @@
   left: 0;
   right: 0;
 }
+>>>>>>> 4826a910e8356924b48f1f5e40b49108d60e6a3e

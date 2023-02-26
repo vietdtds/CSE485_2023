@@ -1,8 +1,7 @@
 <?php
 require './header.php';
 require '../connectDB.php';
-require './function.php';
-
+require'./function.php';
 $conn = connectDB();
 $query = "SELECT * FROM `baiviet`;";
 $result = mysqli_query($conn, $query);
@@ -12,7 +11,7 @@ $result = mysqli_query($conn, $query);
 <main class="container mt-5 mb-5">
   <div class="row">
     <div class="col-sm">
-      <a href="add_category.php" class="btn btn-success">Thêm mới</a>
+      <a href="add_article.php" class="btn btn-success">Thêm mới</a>
       <table class="table">
         <thead>
           <tr>
@@ -45,7 +44,7 @@ $result = mysqli_query($conn, $query);
                 <td><?= html_escape($row['ngayviet'])  ?></td>
                 <td><?= html_escape($row['hinhanh'])  ?></td>
                 <td>
-                  <a href="edit_category.php?id=<?= $row['ma_bviet'] ?>">
+                  <a href="edit_article.php?id=<?= $row['ma_bviet'] ?>">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
