@@ -44,7 +44,7 @@ $result = mysqli_query($conn, $query);
                 <td><?= html_escape($row['ngayviet'])  ?></td>
                 <td><?= html_escape($row['hinhanh'])  ?></td>
                 <td>
-                  <a href="edit_category.php?id=<?= $row['ma_bviet'] ?>">
+                  <a href="edit_article.php?id=<?= $row['ma_bviet'] ?>">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>

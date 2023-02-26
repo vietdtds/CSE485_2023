@@ -1,6 +1,7 @@
 <?php
 require './header.php';
 require '../connectDB.php';
+require './function.php';
 
 $conn = connectDB();
 $query = "SELECT * FROM `theloai`;";
@@ -28,15 +29,17 @@ $result = mysqli_query($conn, $query);
             while ($row = mysqli_fetch_assoc($result)) {
           ?>
               <tr>
-                <th scope="row"><?= $row['ma_tloai']  ?></th>
-                <td><?= $row['ten_tloai']  ?></td>
+                <th scope="row"><?= html_escape($row['ma_tloai'])  ?></th>
+                <td><?= html_escape($row['ten_tloai'])  ?></td>
                 <td>
                   <a href="edit_category.php?id=<?= $row['ma_tloai'] ?>">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
                 <td>
-                  <a href=""><i class="fa-solid fa-trash"></i></a>
+                  <a href="delete_category.php"<?= $row['ma_tloai'] ?>>
+                    <i class="fa-solid fa-trash"></i>
+                  </a>
                 </td>
               </tr>
           <?php

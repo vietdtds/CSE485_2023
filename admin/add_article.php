@@ -1,27 +1,11 @@
 <?php
 include './header.php';
-require '../connectDB.php';
-$valueTitle =  $_POST['valueTitle'] ?? '';
-$valueSong =  $_POST['valueSong'] ?? '';
-$valueCategogy =  $_POST['valueCategogy'] ?? '';
-$valueSummary =  $_POST['valueSummary'] ?? '';
-$valueContent =  $_POST['valueContent'] ?? '';
-$valueAuthor =  $_POST['valueAuthor'] ?? '';
-$valueDays =  $_POST['valueDay'] ?? '';
-$valueImg =  $_POST['valueImg'] ?? '';
-
-
-$conn = connectDB();
-
-$query = "INSERT INTO `baiviet`(`ma_bviet`, `tieude`, `ten_bhat`, `ma_tloai`, `tomtat`, `noidung`, `ma_tgia`, `ngayviet`, `hinhanh`) VALUES ('','$valueTitle','$valueSong','$valueCategogy','$valueSummary','$valueContent','$valueAuthor','$valueDays','$valueImg');";
-$result = mysqli_query($conn, $query);
-
 ?>
 <main class="container mt-5 mb-5">
   <div class="row">
     <div class="col-sm">
       <h3 class="text-center text-uppercase fw-bold">Thêm mới bài viết</h3>
-      <form action="add_article.php" method="POST">
+      <form action="handle_add_article.php" method="POST">
         <div class="input-group mt-3 mb-3">
           <span class="input-group-text" id="lblCatName">Tiêu đề </span>
           <input type="text" class="form-control" name="valueTitle" value=" ">

@@ -33,7 +33,7 @@ $result = mysqli_query($conn, $query);
                 <td><?= html_escape($row['ten_tgia'])  ?></td>
                 <td><?= html_escape($row['hinh_tgia'])  ?></td>
                 <td>
-                  <a href="edit_category.php?id=<?= $row['ma_tgia'] ?>">
+                  <a href="edit_author.php?id=<?= $row['ma_tgia'] ?>">
                     <i class="fa-solid fa-pen-to-square"></i>
                   </a>
                 </td>
