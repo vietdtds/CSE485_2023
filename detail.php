@@ -26,7 +26,7 @@ $conn->close();
 <body>
     <main class="container mt-5">
         <button type="button" class="btn btn-secondary mb-5">
-            <a href="/CSE485_2023" class="text-decoration-none text-light">Home</a>
+            <a href="/index.php" class="text-decoration-none text-light">Home</a>
         </button>
         <div class="row mb-5">
             <div class="col-sm-4">
